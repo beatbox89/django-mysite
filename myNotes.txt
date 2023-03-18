@@ -1,0 +1,34 @@
+Setting Up Before Proceed
+(start 1st)
+
+dotenv setup:
+	pip install django-dotenv
+settings:
+1.	import os
+2.	SECRET_KEY = os.environ.get('SECRET_KEY')
+3.	DEBUG = str(os.environ.get('DEBUG')) == '1'
+	ALLOWED_HOSTS = []
+	if not DEBUG:
+	    ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
+manage.py:
+1.	import os
+2.	dotenv.read_dotenv() # above of os.environ.setdefault
+
+=================================================
+(next 2nd)
+
+Settings:
+ALLOWED_HOSTS = ['*']
+TIME_ZONE = 'Asia/Manila'
+STATICFILES_DIRS = (os.path.join(BASE_DIR/'static'),)
+
+MEDIA_URL = 'account/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'account/static/')
+
+==================================================
+(next 3rd)
+
+Main Project folder urls.py: (as of now "core" folder)
+(sample) - path('', include('Profile.urls')),
+
+
