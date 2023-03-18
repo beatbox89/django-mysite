@@ -4,7 +4,8 @@ db.sqlite3
 
 .env
 
-core/mynotes.txt
+core.code-workspace
+notes.txt
 
 
 
