@@ -1,6 +1,10 @@
-# default
+# default django
+*.log
+*.pot
 *.pyc
+__pycache__
 db.sqlite3
+upload_media
 
 .env
 .src/
@@ -9,8 +13,6 @@ db.sqlite3
 core.code-workspace
 notes.txt
 
-# 
-# upload_media
 
 
 
