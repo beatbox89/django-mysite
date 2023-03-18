@@ -1,13 +1,16 @@
+# default
 *.pyc
 db.sqlite3
-.src/
 
 .env
+.src/
 
+# personalized
 core.code-workspace
 notes.txt
 
-
+# 
+# upload_media
 
 
 
